@@ -37,7 +37,7 @@ Use at the frontend as get_the_author_meta('slug_of_meta') or the_author_meta('s
 
 define('JUIZ_USER_CUSTOM_SLUG', 'juiz_user_custom');
 
-$plugin_url = plugins_url('/'.JUIZ_USER_CUSTOM_SLUG.'/');  
+$plugin_url = plugins_url('/juiz-user-custom/');  
 define('JUIZ_USER_CUSTOM_PATH', $plugin_url);
 
 
