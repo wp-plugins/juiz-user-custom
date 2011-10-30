@@ -19,12 +19,14 @@ By adding new user meta, make a rich authors or users page, for example.
 
 In the futur, type of field (`text`, `e-mail`, `radio`, `textarea`, etc.) will be editable.
 
+If you say "it's broken", please tell me why ;)
+
 == Installation ==
 
 The installation is very easy :
 
 1. **Download** the plugin (it's better :p)
-1. **Unzip** `juiz_user_custom` folder to the `/wp-content/plugins/` directory
+1. **Unzip** `juiz-user-custom-meta` folder to the `/wp-content/plugins/` directory
 1. **Activate the plugin** through the 'Plugins' menu in WordPress
 1. Create your first custom user field in the **setting page** of the plugin
 
