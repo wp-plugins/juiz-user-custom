@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Juiz User Custom Informations\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-29 22:46+0100\n"
+"PO-Revision-Date: 2011-10-29 22:49+0100\n"
+"Last-Translator: Geoffrey <rikuasakura@hotmail.fr>\n"
+"Language-Team: CreativeJuiz <support@creativejuiz.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: C:/wamp/www/wordpress/wp-content/plugins/juiz_user_custom/\n"
+"X-Poedit-Language: Français\n"
+"X-Poedit-Country: France\n"
+"X-Poedit-SourceCharset: URF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: juiz_manage_page.php:22
+msgid "Settings of user custom fields"
+msgstr "Réglages des champs utilisateurs"
+
+#: juiz_manage_page.php:72
+msgid "This custom user field already exists."
+msgstr "Ce champ personnalisé existe déjà."
+
+#: juiz_manage_page.php:88
+msgid "Your custom user field named"
+msgstr "Votre champ personnalisé nommé"
+
+#: juiz_manage_page.php:88
+#: juiz_manage_page.php:111
+msgid "is added"
+msgstr "est ajouté"
+
+#: juiz_manage_page.php:91
+#: juiz_manage_page.php:114
+msgid "Adding of field failed"
+msgstr "L'ajout du champ a échoué"
+
+#: juiz_manage_page.php:111
+msgid "Your first custom user field named"
+msgstr "Votre premier champ personnalisé pour les utilisateurs nommé"
+
+#: juiz_manage_page.php:121
+#: juiz_manage_page.php:274
+msgid "You need to fill the field"
+msgstr "Vous devez renseigner le champ"
+
+#: juiz_manage_page.php:121
+#: juiz_manage_page.php:274
+#: juiz_manage_page.php:374
+#: juiz_manage_page.php:398
+msgid "Label of field"
+msgstr "Intitulé du champ"
+
+#: juiz_manage_page.php:126
+#: juiz_manage_page.php:176
+#: juiz_manage_page.php:278
+msgid "Sorry, you can't do that !"
+msgstr "Désolé, vous ne pouvez pas faire ça !"
+
+#: juiz_manage_page.php:160
+msgid "This custom user field has correctly been removed."
+msgstr "Ce champ personnalisé a correctement été supprimé."
+
+#: juiz_manage_page.php:161
+msgid "Note: no user had informed this field"
+msgstr "Note : aucun utilisateur n'avait renseigné ce champ"
+
+#: juiz_manage_page.php:161
+msgid "user(s) had informed this field"
+msgstr "utilisateurs(s) avai(en)t renseigné ce champ"
+
+#: juiz_manage_page.php:164
+msgid "An error has occured. Deleting isn't possible..."
+msgstr "Une erreur est arrivée. La suppression n'est pas possible..."
+
+#: juiz_manage_page.php:170
+#: juiz_manage_page.php:207
+#: juiz_manage_page.php:268
+msgid "This custom user field doesn't exist..."
+msgstr "Ce champ personnalisé ne semble pas exister..."
+
+#: juiz_manage_page.php:198
+msgid "Edit the custom user field named:"
+msgstr "Édition du champ personnalisé nommé :"
+
+#: juiz_manage_page.php:254
+msgid "This custom user field correctly been updated."
+msgstr "Ce champ personnalisé a correctement été édité."
+
+#: juiz_manage_page.php:255
+msgid "Note: no data updated (no user had informed this field)"
+msgstr "Note : aucune donnée mise à jour (aucun utilisateur n'avait renseigné ce champ)"
+
+#: juiz_manage_page.php:255
+msgid "data(s) updated"
+msgstr "donnée(s) mise(s) à jour"
+
+#: juiz_manage_page.php:258
+msgid "An error has occured. Updating isn't possible..."
+msgstr "Une erreur est arrivée. La mise à jour ne semble pas possible..."
+
+#: juiz_manage_page.php:263
+msgid "The new name/slug you chose already exists."
+msgstr "Le nouveau nom/identifiant que vous avez choisi existe déjà."
+
+#: juiz_manage_page.php:304
+#: juiz_manage_page.php:377
+msgid "optional"
+msgstr "optionnel"
+
+#: juiz_manage_page.php:304
+msgid "in the loop"
+msgstr "dans la boucle"
+
+#: juiz_manage_page.php:308
+msgid "Are you sure?"
+msgstr "Êtes-vous vous sûr(e) ?"
+
+#: juiz_manage_page.php:308
+msgid "This action will delete all the informations about this custom user field!"
+msgstr "Cette action effacera toutes les informations à propos de ce champs personnalisé pour les utilisateurs !"
+
+#: juiz_manage_page.php:308
+msgid "Delete this custom"
+msgstr "Supprimer ce champ"
+
+#: juiz_manage_page.php:309
+msgid "Edit this custom"
+msgstr "Éditer ce champ"
+
+#: juiz_manage_page.php:317
+msgid "No entry for the moment"
+msgstr "Aucun champ perso pour le moment"
+
+#: juiz_manage_page.php:322
+msgid "Manage Juiz user customs"
+msgstr "Gérer les champs personnalisés des utilisateurs"
+
+#: juiz_manage_page.php:339
+msgid "error"
+msgstr "erreur"
+
+#: juiz_manage_page.php:339
+msgid "Well done!"
+msgstr "C'est bon !"
+
+#: juiz_manage_page.php:352
+msgid "Add"
+msgstr "Ajouter"
+
+#: juiz_manage_page.php:361
+msgid "Edit"
+msgstr "Éditer"
+
+#: juiz_manage_page.php:367
+msgid "Create new custom user field"
+msgstr "Créer un nouveau champ personnalisé"
+
+#: juiz_manage_page.php:374
+msgid "ex: Your profession"
+msgstr "ex: Votre profession"
+
+#: juiz_manage_page.php:377
+#: juiz_manage_page.php:399
+msgid "Slug of field"
+msgstr "Identifiant du champ"
+
+#: juiz_manage_page.php:377
+msgid "ex: your_profession"
+msgstr "ex: votre_profession"
+
+#: juiz_manage_page.php:387
+msgid "this custom field"
+msgstr "ce champ personnalisé"
+
+#: juiz_manage_page.php:394
+msgid "Existing custom user fields"
+msgstr "Les champs personnalisé existants"
+
+#: juiz_manage_page.php:400
+msgid "Show in the front-end with this function"
+msgstr "Afficher l'info en public avec la fonction"
+
+#: juiz_manage_page.php:401
+msgid "Type of field"
+msgstr "Type de champ"
+
+#: juiz_manage_page.php:401
+msgid "Future feature"
+msgstr "Fonctionnalité à venir"
+
+#: juiz_manage_page.php:402
+msgid "Actions"
+msgstr "Actions"
+
+#: juiz_manage_page.php:417
+msgid "You love this plugin? You want to offer me something?"
+msgstr "Vous aimez ce plugin ? Vous voulez m'offrir quelque chose ?"
+
+#: juiz_manage_page.php:426
+msgid "You found a bug? Please"
+msgstr "Vous avez trouvé un bogue ? Merci de"
+
+#: juiz_manage_page.php:426
+msgid "report it"
+msgstr "m'en informer"
+
+#: juiz_manage_page.php:426
+msgid "english, french and - maybe - spannish support"
+msgstr "support anglais, français et - peut-être - espagnol"
+
+#: juiz_user_custom.php:79
+msgid "Other info ?"
+msgstr "Autres informations ?"
+
+#: juiz_user_custom.php:111
+msgid "You need to"
+msgstr "Vous devez"
+
+#: juiz_user_custom.php:111
+msgid "add a new user field"
+msgstr "ajouter un nouveau champ de l'utilisateur"
+
+#~ msgid "Juiz User Custom"
+#~ msgstr "Juiz Informations Utilisateurs"
+
+#~ msgid ""
+#~ "You need to fill the field <strong><a href=\"#new_field_label\">Label of "
+#~ "field</a></strong>"
+#~ msgstr ""
+#~ "Vous devez compléter le champ <strong><a href=\"#new_field_label"
+#~ "\">Intitulé du champ</a></strong>"
+
+#~ msgid ""
+#~ "You need to fill the field <strong><a href=\"#up_field_label\">Label of "
+#~ "field</a></strong>"
+#~ msgstr ""
+#~ "Vous devez renseigner le champ <strong><a href=\"#up_field_label"
+#~ "\">Intitulé du champ</a></strong>"
+
+#~ msgid "Slug of field <i>(optional)</i>"
+#~ msgstr "Identifiant du champ <i>(optionnel)</i>"
