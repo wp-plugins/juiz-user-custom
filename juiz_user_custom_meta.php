@@ -45,7 +45,7 @@ define('JUIZ_USER_CUSTOM_PATH', $plugin_url);
 // return "/var/www/wordpress/wp-content/plugins/juiz-user-custom-meta/"
 
 function make_juiz_custom_user_field_multi() {
-	load_plugin_textdomain( 'juiz_cuf', false, JUIZ_USER_CUSTOM_SLUG . '/languages' );
+	load_plugin_textdomain( 'juiz_cuf', false, 'juiz-user-custom-meta/languages' );
 }
 add_action( 'init', 'make_juiz_custom_user_field_multi' );
 
