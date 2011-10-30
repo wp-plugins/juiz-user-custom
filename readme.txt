@@ -1,17 +1,17 @@
-=== Juiz User Custom ===
+=== Juiz User Custom Meta ===
 Contributors: CreativeJuiz
 Donate link: http://creativejuiz.fr
-Tags: author, user, custom, field, rich, user_meta
+Tags: author, user, custom, field, rich, user_meta, meta, information, profile
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 0.1
+Stable tag: 0.2
 
-Allows administrator to configure some extra fields in the profile user panel. With these new fields, make a rich authors or users page, for example.
+Allows administrator to configure some extra fields (user meta) for users. With these new fields, make a rich authors or users page, for example.
 
 == Description ==
 
 Allows administrator to configure some extra fields in the "users" panel.
-With these new fields, make a rich authors or users page, for example.
+By adding new user meta, make a rich authors or users page, for example.
 
 * Add custom fields for all the users of WordPress in one time (in the setting page).
 * Edit or delete them when you want.
@@ -38,14 +38,20 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 == Screenshots ==
 
 1. The setting page.
-2. The `Profile`page of the user.
+2. The `Profile` page of the user.
 
 == Changelog ==
+
+= 0.2 =
+* Rewrite of plugin meta informations
 
 = 0.1 =
 * The first stable version
 
 == Upgrade Notice ==
 
+= 0.2 =
+No need to updrage
+
 = 0.1 =
-* Try it ;)
+Try it ;)

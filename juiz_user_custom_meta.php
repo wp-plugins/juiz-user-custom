@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Juiz User Custom
+Plugin Name: Juiz User Custom Meta
 Plugin URI:
 Description: Allows users to configure some extra meta values to make a rich authors or users page, for example. Add custom fields for all the users of WordPress in one time (in <a href="http://localhost/wordpress/wp-admin/users.php?page=juiz_user_custom">the setting page</a>). Edit or delete them when you want. <a href="http://localhost/wordpress/wp-admin/users.php?page=juiz_user_custom">Setting page</a>
 Author: Geoffrey Crofte
-Version: 0.1
+Version: 0.2
 Author URI: http://crofte.fr
 License: GPLv2 or later 
 */
@@ -35,14 +35,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 Use at the frontend as get_the_author_meta('slug_of_meta') or the_author_meta('slug_of_meta')
 */
 
-define('JUIZ_USER_CUSTOM_SLUG', 'juiz_user_custom');
+define('JUIZ_USER_CUSTOM_SLUG', 'juiz_user_custom_meta');
 
-$plugin_url = plugins_url('/juiz-user-custom/');  
+$plugin_url = plugins_url('/juiz-user-custom-meta/');  
 define('JUIZ_USER_CUSTOM_PATH', $plugin_url);
 
 
 // echo plugin_dir_path( __FILE__ );
-// return "/var/www/wordpress/wp-content/plugins/juiz_user_custom/"
+// return "/var/www/wordpress/wp-content/plugins/juiz-user-custom-meta/"
 
 function make_juiz_custom_user_field_multi() {
 	load_plugin_textdomain( 'juiz_cuf', false, JUIZ_USER_CUSTOM_SLUG . '/languages' );
