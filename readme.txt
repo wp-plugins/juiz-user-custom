@@ -4,7 +4,7 @@ Donate link: http://creativejuiz.fr
 Tags: author, user, custom, field, rich, user_meta
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 0.5
+Stable tag: 0.1
 
 Allows administrator to configure some extra fields in the profile user panel. With these new fields, make a rich authors or users page, for example.
 
@@ -42,10 +42,10 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 
 == Changelog ==
 
-= 0.5 =
+= 0.1 =
 * The first stable version
 
 == Upgrade Notice ==
 
-= 0.5 =
+= 0.1 =
 * Try it ;)
