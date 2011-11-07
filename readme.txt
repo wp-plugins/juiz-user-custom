@@ -1,0 +1,59 @@
+=== Juiz User Custom Meta ===
+Contributors: CreativeJuiz
+Donate link: http://creativejuiz.fr
+Tags: author, user, custom, field, rich, user_meta, meta, information, profile
+Requires at least: 3.0
+Tested up to: 3.2.1
+Stable tag: 0.2
+
+Allows administrator to configure some extra fields (user meta) for users. With these new fields, make a rich authors or users page, for example.
+
+== Description ==
+
+Allows administrator to configure some extra fields in the "users" panel.
+By adding new user meta, make a rich authors or users page, for example.
+
+* Add custom fields for all the users of WordPress in one time (in the setting page).
+* Edit or delete them when you want.
+* Learn how to display the custom information about the users (using the author_meta() function)
+
+In the futur, type of field (`text`, `e-mail`, `radio`, `textarea`, etc.) will be editable.
+
+If you say "it's broken", please tell me why ;)
+
+== Installation ==
+
+The installation is very easy :
+
+1. **Download** the plugin (it's better :p)
+1. **Unzip** `juiz-user-custom-meta` folder to the `/wp-content/plugins/` directory
+1. **Activate the plugin** through the 'Plugins' menu in WordPress
+1. Create your first custom user field in the **setting page** of the plugin
+
+== Frequently Asked Questions ==
+
+= How can i display the custom informations about the user =
+
+By using the `the_author_meta()` or `get_the_author_meta()` function.
+See the function page for more information : [the_author_meta()](http://codex.wordpress.org/Function_Reference/the_author_meta "WordPress Codex")
+
+== Screenshots ==
+
+1. The setting page.
+2. The `Profile` page of the user.
+
+== Changelog ==
+
+= 0.2 =
+* Rewrite of plugin meta informations
+
+= 0.1 =
+* The first stable version
+
+== Upgrade Notice ==
+
+= 0.2 =
+No need to updrage
+
+= 0.1 =
+Try it ;)
