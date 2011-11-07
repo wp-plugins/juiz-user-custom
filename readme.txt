@@ -4,7 +4,7 @@ Donate link: http://creativejuiz.fr
 Tags: author, user, custom, field, rich, user_meta, meta, information, profile
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 0.2
+Stable tag: 0.3
 
 Allows administrator to configure some extra fields (user meta) for users. With these new fields, make a rich authors or users page, for example.
 
@@ -13,13 +13,31 @@ Allows administrator to configure some extra fields (user meta) for users. With 
 Allows administrator to configure some extra fields in the "users" panel.
 By adding new user meta, make a rich authors or users page, for example.
 
-* Add custom fields for all the users of WordPress in one time (in the setting page).
+* Add custom fields for all the users of your WordPress site in one time (in the setting page).
 * Edit or delete them when you want.
-* Learn how to display the custom information about the users (using the author_meta() function)
+* Learn how to display the custom information about the users in your web site (using the author_meta() function)
 
 In the futur, type of field (`text`, `e-mail`, `radio`, `textarea`, etc.) will be editable.
 
 If you say "it's broken", please tell me why ;)
+
+
+-------------------------
+
+Français
+--
+
+Permet à un administrateur de configurer quelques champs personnalisés dans le panneau utilisateur.
+En ajoutant de nouvelle informations pour l'utilisateur, vous serez à même de créer une page "Auteurs" ou une liste d'utilisateur pour votre site, par exemple.
+
+* Ajoutez des champs personnalisés pour tous les utilisateurs de votre site WordPress en une seule fois (dans la page des réglages).
+* Éditez ou supprimez les quand bon vous semble.
+* Apprenez simplement comment afficher ces informations à propose des utilisateurs sur votre site (en utilisant la fonction author_meta())
+
+Dans le futur, le type de champs (texte, e-mail, bouton radio, champs texte, etc.) sera éditable.
+
+Si vous notez le plugin comme étant cassé ou fonctionnant mal, merci de me dire pourquoi ;)
+
 
 == Installation ==
 
@@ -44,6 +62,11 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 
 == Changelog ==
 
+= 0.3 =
+* Translation updated
+* French meta description
+* Plugin core scripts updated
+
 = 0.2 =
 * Rewrite of plugin meta informations
 
@@ -52,8 +75,11 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 
 == Upgrade Notice ==
 
+= 0.3 =
+Upgrade for language if you need French
+
 = 0.2 =
-No need to updrage
+No need to upgrade
 
 = 0.1 =
 Try it ;)

@@ -4,7 +4,7 @@ Plugin Name: Juiz User Custom Meta
 Plugin URI:
 Description: Allows users to configure some extra meta values to make a rich authors or users page, for example. Add custom fields for all the users of WordPress in one time (in <a href="http://localhost/wordpress/wp-admin/users.php?page=juiz_user_custom">the setting page</a>). Edit or delete them when you want. <a href="http://localhost/wordpress/wp-admin/users.php?page=juiz_user_custom">Setting page</a>
 Author: Geoffrey Crofte
-Version: 0.2
+Version: 0.3
 Author URI: http://crofte.fr
 License: GPLv2 or later 
 */
@@ -30,24 +30,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 */
 
-
-/*
-Use at the frontend as get_the_author_meta('slug_of_meta') or the_author_meta('slug_of_meta')
-*/
+$plugin_url = plugins_url('/juiz-user-custom/');  
 
 define('JUIZ_USER_CUSTOM_SLUG', 'juiz_user_custom_meta');
-
-$plugin_url = plugins_url('/juiz-user-custom-meta/');  
 define('JUIZ_USER_CUSTOM_PATH', $plugin_url);
+define('JUIZ_SHOW_DONATION_LINK', true); // put "false" if you don't want to see donation link
 
 
 // echo plugin_dir_path( __FILE__ );
-// return "/var/www/wordpress/wp-content/plugins/juiz-user-custom-meta/"
-
-function make_juiz_custom_user_field_multi() {
-	load_plugin_textdomain( 'juiz_cuf', false, 'juiz-user-custom-meta/languages' );
-}
-add_action( 'init', 'make_juiz_custom_user_field_multi' );
+// return "/var/www/wordpress/wp-content/plugins/juiz-user-custom/"
 
 class juiz_user_meta {
 	
@@ -55,29 +46,34 @@ class juiz_user_meta {
 	function juiz_user_meta() {
 		
 		global $user_id, $juiz_user_infos;
-		
-		// $juiz_user_infos = get_user_meta( 1, 'juiz_user_custom_fields', true );
+
 		$juiz_user_infos = get_option( 'juiz_user_custom_fields', 'a:0:{}' );
 		$juiz_user_infos = unserialize ( $juiz_user_infos );
 		
 		if ( is_admin() ) {
-			add_action('show_user_profile', array ( &$this,'action_show_user_profile' ) );
-			add_action('edit_user_profile', array ( &$this,'action_show_user_profile' ) );
-			add_action('personal_options_update', array ( &$this,'action_process_option_update' ) );
-			add_action('edit_user_profile_update', array ( &$this,'action_process_option_update' ) );
+			add_action('show_user_profile', array ( &$this,'juiz_action_show_user_profile' ) );
+			add_action('edit_user_profile', array ( &$this,'juiz_action_show_user_profile' ) );
+			add_action('personal_options_update', array ( &$this,'juiz_action_process_option_update' ) );
+			add_action('edit_user_profile_update', array ( &$this,'juiz_action_process_option_update' ) );
+			
+			add_action( 'init', array ( &$this,'make_juiz_custom_user_field_multilang') );
 			
 			wp_enqueue_style( 'juiz_styles', JUIZ_USER_CUSTOM_PATH . 'css/juiz-admin.css', false, false, 'all' );
 		}
 	}
+	
+	// languages
+	function make_juiz_custom_user_field_multilang() {
+		load_plugin_textdomain( 'juiz_cuf', false, 'juiz-user-custom/languages' );
+	}
 
-	function action_show_user_profile() {
+	// user profil
+	function juiz_action_show_user_profile() {
 		
 		global $user_id, $juiz_user_infos;
 		
 	?>
-	
 		<h3><?php _e('Other info ?', 'juiz_cuf') ?></h3>
-	
 	<?php 
 		if( count ( $juiz_user_infos ) != 0 ) {
 	?>
@@ -114,7 +110,7 @@ class juiz_user_meta {
 		}
 	}
 
-	function action_process_option_update() {
+	function juiz_action_process_option_update() {
 		
 		global $user_id, $juiz_user_infos;
 
@@ -138,6 +134,6 @@ add_action('plugins_loaded', create_function('','global $juiz_user_meta_instance
 
 /* Manage page */
 
-require_once('juiz_manage_page.php');
+require_once('juiz-manage-page.php');
 
 ?>

@@ -61,7 +61,6 @@ function juiz_manage_user_custom_page() {
 		$new_slug = (trim ( $_POST['new_field_slug'] ) != '' )  ? juiz_slugIt(trim($_POST['new_field_slug'])) : juiz_slugIt($new_label);
 		
 		// when we add a custom user field
-		//if ( $juiz_metadata = get_user_meta( 1, 'juiz_user_custom_fields', true ) ) {
 		if ( $juiz_metadata = get_option( 'juiz_user_custom_fields' ) ) {
 			
 			$prev_value = $juiz_metadata; // to be sure when we use update_user_meta line 71
@@ -80,7 +79,6 @@ function juiz_manage_user_custom_page() {
 				$juiz_custom_fields = serialize( $juiz_metadata );
 				
 				// we update the list of custom fields
-				// $updating_user_meta = update_user_meta( 1, 'juiz_user_custom_fields', $juiz_custom_fields, $prev_value );
 				$updating_user_meta = update_option( 'juiz_user_custom_fields', $juiz_custom_fields );
 				
 				if($updating_user_meta)
@@ -101,7 +99,6 @@ function juiz_manage_user_custom_page() {
 				$new_slug => array ( $new_label, 'text' )
 			);
 			$juiz_custom_fields = serialize($juiz_custom_fields);
-			// $adding_new_meta = add_user_meta( 1, 'juiz_user_custom_fields', $juiz_custom_fields, true );
 			$adding_new_meta = update_option('juiz_user_custom_fields', $juiz_custom_fields);
 			
 			
@@ -136,7 +133,6 @@ function juiz_manage_user_custom_page() {
 	
 	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='delete' && isset($_GET['custom']) && $_GET['custom']!='') {
 		
-		// if ( $juiz_metadata = get_user_meta( 1, 'juiz_user_custom_fields', true ) ) {
 		if ( $juiz_metadata = get_option( 'juiz_user_custom_fields' ) ) {
 
 			$before_del = $juiz_metadata; // to be sure when we use update_user_meta line XXX
@@ -148,7 +144,6 @@ function juiz_manage_user_custom_page() {
 
 				unset ( $juiz_metadata[$slug_2_del] );
 				$juiz_custom_fields = serialize ( $juiz_metadata );
-				// $updating_user_meta = update_user_meta( 1, 'juiz_user_custom_fields', $juiz_custom_fields, $before_del );
 				$updating_user_meta = update_option( 'juiz_user_custom_fields', $juiz_custom_fields );
 				
 				$delete_users_fields = $wpdb->query($wpdb->prepare("DELETE FROM $wpdb->usermeta WHERE meta_key = %s ", 'juiz_'.$slug_2_del));
@@ -185,7 +180,6 @@ function juiz_manage_user_custom_page() {
 	
 	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='edit' && isset($_GET['custom']) && $_GET['custom']!='') {
 		
-		// if ( $juiz_metadata = get_user_meta( 1, 'juiz_user_custom_fields', true ) ) {
 		if ( $juiz_metadata = get_option('juiz_user_custom_fields' ) ) {
 			
 			$juiz_metadata = unserialize ( $juiz_metadata );
@@ -220,7 +214,6 @@ function juiz_manage_user_custom_page() {
 	
 	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='editing' && isset($_POST['up_field_label']) && $_POST['up_field_label']!='') {
 		
-		// if ( $juiz_metadata = get_user_meta( 1, 'juiz_user_custom_fields', true ) ) {
 		if ( $juiz_metadata = get_option( 'juiz_user_custom_fields' ) ) {
 
 			$before_up = $juiz_metadata; // to be sure when we use update_user_meta line XXX
@@ -239,10 +232,9 @@ function juiz_manage_user_custom_page() {
 				
 				$juiz_metadata[$up_field_slug] = $slug_2_up_content; // create new slug name
 				$juiz_metadata[$up_field_slug][0] = $up_field_label; // update the label name
-				// $juiz_metadata[$up_field_slug][1] = $up_field_type; // update the type
+				// $juiz_metadata[$up_field_slug][1] = $up_field_type; // update the type... later
 				
 				$juiz_custom_fields = serialize ( $juiz_metadata );
-				// $updating_user_meta = update_user_meta( 1, 'juiz_user_custom_fields', $juiz_custom_fields, $before_up );
 				$updating_user_meta = update_option( 'juiz_user_custom_fields', $juiz_custom_fields );
 				
 				$update_users_fields = $wpdb->query($wpdb->prepare("UPDATE $wpdb->usermeta SET meta_key = %s WHERE meta_key = %s ", 'juiz_'.$up_field_slug, 'juiz_'.$slug_2_up));
@@ -285,7 +277,6 @@ function juiz_manage_user_custom_page() {
 		==============================
 	*/
 	if(!$juiz_metadata) {
-		// $juiz_metadata = get_user_meta( 1, 'juiz_user_custom_fields', true );
 		$juiz_metadata = get_option( 'juiz_user_custom_fields' );
 		
 		if ( !is_array ( $juiz_metadata ) )
@@ -301,7 +292,7 @@ function juiz_manage_user_custom_page() {
 						<td>'.$k.'<br /></td>
 						<td>
 							<pre><code>&lt;?php echo <a target="_blank" href="http://codex.wordpress.org/Function_Reference/the_author_meta">get_the_author_meta</a>( \'juiz_'.$k.'\', $user_id ); ?&gt;</code></pre>
-							<em><code>$user_id</code> : '.__('optional','juiz_cuf').__('in the loop','juiz_cuf').'</em>
+							<em><code>$user_id</code> : '.__('optional','juiz_cuf').' '.__('in the loop','juiz_cuf').'</em>
 						</td>
 						<td><i>'.$v[1].'</i></td>
 						<td>
@@ -326,7 +317,7 @@ function juiz_manage_user_custom_page() {
 			if ( $need_an_edit ) $more_action = "&amp;do=editing";
 		?>
 		
-		<form method="post" action="<?php echo get_bloginfo('url'); ?>/wp-admin/users.php?page=<?php echo JUIZ_USER_CUSTOM_SLUG . $more_action; ?>" id="juiz_custom_user_form">
+		<form method="post" action="<?php echo admin_url('users.php?page='.JUIZ_USER_CUSTOM_SLUG.$more_action); ?>" id="juiz_custom_user_form">
 		
 			<?php 
 				// if we have a message
@@ -384,7 +375,10 @@ function juiz_manage_user_custom_page() {
 						<td><input type="text" name="<?php echo $label_for_id; ?>field_slug" id="<?php echo $label_for_id; ?>field_slug" value="<?php echo $input_val_slug; ?>" /></td>
 					</tr>
 					<tr>
-						<td colspan="2" class="submit"><input class="button-primary" type="submit" value="<?php echo $submit_val .' '. __('this custom field', 'juiz_cuf') ?>" /></td>
+						<td colspan="2" class="submit">
+							<?php wp_nonce_field( JUIZ_USER_CUSTOM_SLUG, '_wpnonce', true, true ); ?>
+							<input class="button-primary" type="submit" value="<?php echo $submit_val .' '. __('this custom field', 'juiz_cuf') ?>" />
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -414,6 +408,9 @@ function juiz_manage_user_custom_page() {
 		</form>
 		
 		<div class="juiz_support">
+			<?php
+				if ( JUIZ_SHOW_DONATION_LINK ) {
+			?>
 			<div class="pp"><?php echo __('You love this plugin? You want to offer me something?', 'juiz_cuf') ?> 
 				<form class="pp_form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -423,6 +420,9 @@ function juiz_manage_user_custom_page() {
 					<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
 				</form>
 			</div>
+			<?php 
+				}
+			?>
 			<p><?php echo __('You found a bug? Please', 'juiz_cuf') .', <a href="mailto:support@creativejuiz.com?subject=Support for the WordPress \'Juiz User Custom\' plugin">'.__('report it', 'juiz_cuf') .'</a> <em>('. __('english, french and - maybe - spannish support', 'juiz_cuf').')</em>'; ?></p>			
 		</div>
 	</div>
