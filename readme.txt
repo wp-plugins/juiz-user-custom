@@ -24,19 +24,19 @@ If you say "it's broken", please tell me why ;)
 
 -------------------------
 
-Français
+FranÃ§ais
 --
 
-Permet à un administrateur de configurer quelques champs personnalisés dans le panneau utilisateur.
-En ajoutant de nouvelle informations pour l'utilisateur, vous serez à même de créer une page "Auteurs" ou une liste d'utilisateur pour votre site, par exemple.
+Permet Ã  un administrateur de configurer quelques champs personnalisÃ©s dans le panneau utilisateur.
+En ajoutant de nouvelle informations pour l'utilisateur, vous serez Ã  mÃªme de crÃ©er une page "Auteurs" ou une liste d'utilisateur pour votre site, par exemple.
 
-* Ajoutez des champs personnalisés pour tous les utilisateurs de votre site WordPress en une seule fois (dans la page des réglages).
-* Éditez ou supprimez les quand bon vous semble.
-* Apprenez simplement comment afficher ces informations à propose des utilisateurs sur votre site (en utilisant la fonction author_meta())
+* Ajoutez des champs personnalisÃ©s pour tous les utilisateurs de votre site WordPress en une seule fois (dans la page des rÃ©glages).
+* Ã‰ditez ou supprimez les quand bon vous semble.
+* Apprenez simplement comment afficher ces informations Ã  propose des utilisateurs sur votre site (en utilisant la fonction author_meta())
 
-Dans le futur, le type de champs (texte, e-mail, bouton radio, champs texte, etc.) sera éditable.
+Dans le futur, le type de champs (texte, e-mail, bouton radio, champs texte, etc.) sera Ã©ditable.
 
-Si vous notez le plugin comme étant cassé ou fonctionnant mal, merci de me dire pourquoi ;)
+Si vous notez le plugin comme Ã©tant cassÃ© ou fonctionnant mal, merci de me dire pourquoi ;)
 
 
 == Installation ==
