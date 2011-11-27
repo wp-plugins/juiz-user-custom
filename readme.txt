@@ -4,7 +4,7 @@ Donate link: http://creativejuiz.fr
 Tags: author, user, custom, field, rich, user_meta, meta, information, profile
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 0.3
+Stable tag: 0.4
 
 Allows administrator to configure some extra fields (user meta) for users. With these new fields, make a rich authors or users page, for example.
 
@@ -24,19 +24,19 @@ If you say "it's broken", please tell me why ;)
 
 -------------------------
 
-FranÃ§ais
+Français
 --
 
-Permet Ã  un administrateur de configurer quelques champs personnalisÃ©s dans le panneau utilisateur.
-En ajoutant de nouvelle informations pour l'utilisateur, vous serez Ã  mÃªme de crÃ©er une page "Auteurs" ou une liste d'utilisateur pour votre site, par exemple.
+Permet à un administrateur de configurer quelques champs personnalisés dans le panneau utilisateur.
+En ajoutant de nouvelle informations pour l'utilisateur, vous serez à même de créer une page "Auteurs" ou une liste d'utilisateur pour votre site, par exemple.
 
-* Ajoutez des champs personnalisÃ©s pour tous les utilisateurs de votre site WordPress en une seule fois (dans la page des rÃ©glages).
-* Ã‰ditez ou supprimez les quand bon vous semble.
-* Apprenez simplement comment afficher ces informations Ã  propose des utilisateurs sur votre site (en utilisant la fonction author_meta())
+* Ajoutez des champs personnalisés pour tous les utilisateurs de votre site WordPress en une seule fois (dans la page des réglages).
+* Éditez ou supprimez les quand bon vous semble.
+* Apprenez simplement comment afficher ces informations à propose des utilisateurs sur votre site (en utilisant la fonction author_meta())
 
-Dans le futur, le type de champs (texte, e-mail, bouton radio, champs texte, etc.) sera Ã©ditable.
+Dans le futur, le type de champs (texte, e-mail, bouton radio, champs texte, etc.) sera éditable.
 
-Si vous notez le plugin comme Ã©tant cassÃ© ou fonctionnant mal, merci de me dire pourquoi ;)
+Si vous notez le plugin comme étant cassé ou fonctionnant mal, merci de me dire pourquoi ;)
 
 
 == Installation ==
@@ -62,6 +62,9 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 
 == Changelog ==
 
+= 0.4 =
+* Add some classes in the tables
+
 = 0.3 =
 * Translation updated
 * French meta description
@@ -74,6 +77,9 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 * The first stable version
 
 == Upgrade Notice ==
+
+= 0.4 =
+Upgrade if you need to user CSS classes to style the tables
 
 = 0.3 =
 Upgrade for language if you need French

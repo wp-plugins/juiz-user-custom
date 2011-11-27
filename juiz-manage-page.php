@@ -288,14 +288,14 @@ function juiz_manage_user_custom_page() {
 		foreach($juiz_metadata as $k => $v) {
 			$existing_fields .= '
 					<tr id="juiz_'.$k.'" class="alt_'.($iii%2).'">
-						<td>'.$v[0].'</td>
-						<td>'.$k.'<br /></td>
-						<td>
+						<td class="title_col">'.$v[0].'</td>
+						<td class="slug_col">'.$k.'<br /></td>
+						<td class="technical_help_col">
 							<pre><code>&lt;?php echo <a target="_blank" href="http://codex.wordpress.org/Function_Reference/the_author_meta">get_the_author_meta</a>( \'juiz_'.$k.'\', $user_id ); ?&gt;</code></pre>
 							<em><code>$user_id</code> : '.__('optional','juiz_cuf').' '.__('in the loop','juiz_cuf').'</em>
 						</td>
-						<td><i>'.$v[1].'</i></td>
-						<td>
+						<td class="input_type_col"><i>'.$v[1].'</i></td>
+						<td class="actions_col">
 							<a onclick="return confirm(\''.__('Are you sure?', 'juiz_cuf').'\n'.__('This action will delete all the informations about this custom user field!', 'juiz_cuf').'\')" class="juiz_delete" title="' . __('Delete this custom', 'juiz_cuf') . '" href="?page=' . JUIZ_USER_CUSTOM_SLUG . '&amp;do=delete&amp;custom='.$k.'">' . __('Delete this custom', 'juiz_cuf') . '</a>
 							<a class="juiz_edit" title="' . __('Edit this custom', 'juiz_cuf') . '" href="?page=' . JUIZ_USER_CUSTOM_SLUG . '&amp;do=edit&amp;custom='.$k.'">' . __('Edit this custom', 'juiz_cuf') . '</a>
 						</td>
@@ -386,14 +386,14 @@ function juiz_manage_user_custom_page() {
 		if( !$need_an_edit) {
 		?>
 			<h3><?php _e('Existing custom user fields', 'juiz_cuf'); ?></h3>
-			<table class="form-table widefat">
+			<table class="form-table widefat" id="juiz_cuf_table">
 				<thead>
 					<tr>
-						<th><?php _e('Label of field', 'juiz_cuf'); ?></th>
-						<th><?php _e('Slug of field', 'juiz_cuf'); ?></th>
-						<th><?php _e('Show in the front-end with this function', 'juiz_cuf'); ?></th>
-						<th><?php _e('Type of field', 'juiz_cuf'); ?><em>(<?php _e('Future feature', 'juiz_cuf'); ?>)</em></th>
-						<th><?php _e('Actions', 'juiz_cuf'); ?></th>
+						<th class="title_col"><?php _e('Label of field', 'juiz_cuf'); ?></th>
+						<th class="slug_col"><?php _e('Slug of field', 'juiz_cuf'); ?></th>
+						<th class="technical_help_col"><?php _e('Show in the front-end with this function', 'juiz_cuf'); ?></th>
+						<th class="input_type_col"><?php _e('Type of field', 'juiz_cuf'); ?><em>(<?php _e('Future feature', 'juiz_cuf'); ?>)</em></th>
+						<th class="actions_col"><?php _e('Actions', 'juiz_cuf'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
