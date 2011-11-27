@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Juiz User Custom Informations\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-10-29 22:47+0100\n"
+"PO-Revision-Date: 2011-10-29 22:47+0100\n"
+"Last-Translator: Geoffrey <rikuasakura@hotmail.fr>\n"
+"Language-Team: CreativeJuiz <support@creativejuiz.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: C:/wamp/www/wordpress/wp-content/plugins/juiz_user_custom/\n"
+"X-Poedit-Language: Français\n"
+"X-Poedit-Country: France\n"
+"X-Poedit-SourceCharset: URF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: juiz_manage_page.php:22
+msgid "Settings of user custom fields"
+msgstr "Settings of user custom fields"
+
+#: juiz_manage_page.php:72
+msgid "This custom user field already exists."
+msgstr "This custom user field already exists."
+
+#: juiz_manage_page.php:88
+msgid "Your custom user field named"
+msgstr "Your custom user field named"
+
+#: juiz_manage_page.php:88
+#: juiz_manage_page.php:111
+msgid "is added"
+msgstr "is added"
+
+#: juiz_manage_page.php:91
+#: juiz_manage_page.php:114
+msgid "Adding of field failed"
+msgstr "Adding of field failed"
+
+#: juiz_manage_page.php:111
+msgid "Your first custom user field named"
+msgstr "Your first custom user field named"
+
+#: juiz_manage_page.php:121
+#: juiz_manage_page.php:274
+msgid "You need to fill the field"
+msgstr "You need to fill the field"
+
+#: juiz_manage_page.php:121
+#: juiz_manage_page.php:274
+#: juiz_manage_page.php:374
+#: juiz_manage_page.php:398
+msgid "Label of field"
+msgstr "Label of field"
+
+#: juiz_manage_page.php:126
+#: juiz_manage_page.php:176
+#: juiz_manage_page.php:278
+msgid "Sorry, you can't do that !"
+msgstr "Sorry, you can't do that !"
+
+#: juiz_manage_page.php:160
+msgid "This custom user field has correctly been removed."
+msgstr "This custom user field has correctly been removed."
+
+#: juiz_manage_page.php:161
+msgid "Note: no user had informed this field"
+msgstr "Note: no user had informed this field"
+
+#: juiz_manage_page.php:161
+msgid "user(s) had informed this field"
+msgstr "user(s) had informed this field"
+
+#: juiz_manage_page.php:164
+msgid "An error has occured. Deleting isn't possible..."
+msgstr "An error has occured. Deleting isn't possible..."
+
+#: juiz_manage_page.php:170
+#: juiz_manage_page.php:207
+#: juiz_manage_page.php:268
+msgid "This custom user field doesn't exist..."
+msgstr "This custom user field doesn't exist..."
+
+#: juiz_manage_page.php:198
+msgid "Edit the custom user field named:"
+msgstr "Edit the custom user field named:"
+
+#: juiz_manage_page.php:254
+msgid "This custom user field correctly been updated."
+msgstr "This custom user field correctly been updated."
+
+#: juiz_manage_page.php:255
+msgid "Note: no data updated (no user had informed this field)"
+msgstr "Note: no data updated (no user had informed this field)"
+
+#: juiz_manage_page.php:255
+msgid "data(s) updated"
+msgstr "data(s) updated"
+
+#: juiz_manage_page.php:258
+msgid "An error has occured. Updating isn't possible..."
+msgstr "An error has occured. Updating isn't possible..."
+
+#: juiz_manage_page.php:263
+msgid "The new name/slug you chose already exists."
+msgstr "The new name/slug you chose already exists."
+
+#: juiz_manage_page.php:304
+#: juiz_manage_page.php:377
+msgid "optional"
+msgstr "optional"
+
+#: juiz_manage_page.php:304
+msgid "in the loop"
+msgstr "in the loop"
+
+#: juiz_manage_page.php:308
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: juiz_manage_page.php:308
+msgid "This action will delete all the informations about this custom user field!"
+msgstr "This action will delete all the informations about this custom user field!"
+
+#: juiz_manage_page.php:308
+msgid "Delete this custom"
+msgstr "Delete this custom"
+
+#: juiz_manage_page.php:309
+msgid "Edit this custom"
+msgstr "Edit this custom"
+
+#: juiz_manage_page.php:317
+msgid "No entry for the moment"
+msgstr "No entry for the moment"
+
+#: juiz_manage_page.php:322
+msgid "Manage Juiz user customs"
+msgstr "Manage Juiz user customs"
+
+#: juiz_manage_page.php:339
+msgid "error"
+msgstr "error"
+
+#: juiz_manage_page.php:339
+msgid "Well done!"
+msgstr "Well done!"
+
+#: juiz_manage_page.php:352
+msgid "Add"
+msgstr "Add"
+
+#: juiz_manage_page.php:361
+msgid "Edit"
+msgstr "Edit"
+
+#: juiz_manage_page.php:367
+msgid "Create new custom user field"
+msgstr "Create new custom user field"
+
+#: juiz_manage_page.php:374
+msgid "ex: Your profession"
+msgstr "ex: Your profession"
+
+#: juiz_manage_page.php:377
+#: juiz_manage_page.php:399
+msgid "Slug of field"
+msgstr "Slug of field"
+
+#: juiz_manage_page.php:377
+msgid "ex: your_profession"
+msgstr "ex: your_profession"
+
+#: juiz_manage_page.php:387
+msgid "this custom field"
+msgstr "this custom field"
+
+#: juiz_manage_page.php:394
+msgid "Existing custom user fields"
+msgstr "Existing custom user fields"
+
+#: juiz_manage_page.php:400
+msgid "Show in the front-end with this function"
+msgstr "Show in the front-end with this function"
+
+#: juiz_manage_page.php:401
+msgid "Type of field"
+msgstr "Type of field"
+
+#: juiz_manage_page.php:401
+msgid "Future feature"
+msgstr "Future feature"
+
+#: juiz_manage_page.php:402
+msgid "Actions"
+msgstr "Actions"
+
+#: juiz_manage_page.php:417
+msgid "You love this plugin? You want to offer me something?"
+msgstr "You love this plugin? You want to offer me something?"
+
+#: juiz_manage_page.php:426
+msgid "You found a bug? Please"
+msgstr "You found a bug? Please"
+
+#: juiz_manage_page.php:426
+msgid "report it"
+msgstr "report it"
+
+#: juiz_manage_page.php:426
+msgid "english, french and - maybe - spannish support"
+msgstr "english, french and - maybe - spannish support"
+
+#: juiz_user_custom.php:79
+msgid "Other info ?"
+msgstr "Other info ?"
+
+#: juiz_user_custom.php:111
+msgid "You need to"
+msgstr "You need to"
+
+#: juiz_user_custom.php:111
+msgid "add a new user field"
+msgstr "add a new user field"
+
+#~ msgid "Juiz User Custom"
+#~ msgstr "Juiz User Custom"
+
+#~ msgid ""
+#~ "You need to fill the field <strong><a href=\"#new_field_label\">Label of "
+#~ "field</a></strong>"
+#~ msgstr ""
+#~ "You need to fill the field <strong><a href=\"#new_field_label\">Label of "
+#~ "field</a></strong>"
+
+#~ msgid ""
+#~ "You need to fill the field <strong><a href=\"#up_field_label\">Label of "
+#~ "field</a></strong>"
+#~ msgstr ""
+#~ "You need to fill the field <strong><a href=\"#up_field_label\">Label of "
+#~ "field</a></strong>"
+
+#~ msgid "Slug of field <i>(optional)</i>"
+#~ msgstr "Slug of field <i>(optional)</i>"
