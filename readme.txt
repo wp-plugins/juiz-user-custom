@@ -1,6 +1,6 @@
-=== Juiz User Custom Meta ===
+﻿=== Juiz User Custom Meta ===
 Contributors: CreativeJuiz
-Donate link: http://creativejuiz.fr
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P39NJPCWVXGDY&lc=FR&item_name=Juiz%20User%20Custom%20Meta%20%2d%20WordPress%20Plugin&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: author, user, custom, field, rich, user_meta, meta, information, profile
 Requires at least: 3.0
 Tested up to: 3.3.1
