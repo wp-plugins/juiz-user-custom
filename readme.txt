@@ -3,8 +3,8 @@ Contributors: CreativeJuiz
 Donate link: http://creativejuiz.fr
 Tags: author, user, custom, field, rich, user_meta, meta, information, profile
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 0.4
+Tested up to: 3.3.1
+Stable tag: 0.5
 
 Allows administrator to configure some extra fields (user meta) for users. With these new fields, make a rich authors or users page, for example.
 
@@ -61,6 +61,9 @@ See the function page for more information : [the_author_meta()](http://codex.wo
 2. The `Profile` page of the user.
 
 == Changelog ==
+
+= 0.5 =
+* Add WordPress 3.3.1 support
 
 = 0.4 =
 * Add some classes in the tables

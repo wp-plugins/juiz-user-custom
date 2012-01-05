@@ -4,7 +4,7 @@ Plugin Name: Juiz User Custom Meta
 Plugin URI:
 Description: Allows users to configure some extra meta values to make a rich authors or users page, for example. Add custom fields for all the users of WordPress in one time (in the setting page in *user* submenu). Edit or delete them when you want.
 Author: Geoffrey Crofte
-Version: 0.4
+Version: 0.5
 Author URI: http://crofte.fr
 License: GPLv2 or later 
 */

@@ -28,9 +28,11 @@ function juiz_manage_user_custom_page() {
 	
 	$existing_fields = $juiz_metadata = $need_an_edit = false;
 	$edit_form_title = $edit_form_name = $edit_old_key = $the_old_label = $the_old_slug = $the_old_type = '';
-	
+
 	// information about the user
-	$userRights = $current_user->data->user_level;
+	$can_create_users = (isset($current_user->data->user_level) AND $current_user->data->user_level >=8) ? true : false;
+	if ( !$can_create_users )
+		$can_create_users = ($current_user->allcaps['create_users']) ? true : false;
 	
 	// informatives variables
 	$juiz_message = '';
@@ -55,7 +57,7 @@ function juiz_manage_user_custom_page() {
 	*/
 	
 	// if the user has rights and send a post information
-	if ( $userRights >= 8 && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label']) && trim($_POST['new_field_label'])!='') {
+	if ( $can_create_users && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label']) && trim($_POST['new_field_label'])!='') {
 		
 		$new_label = trim($_POST['new_field_label']);
 		$new_slug = (trim ( $_POST['new_field_slug'] ) != '' )  ? juiz_slugIt(trim($_POST['new_field_slug'])) : juiz_slugIt($new_label);
@@ -114,12 +116,12 @@ function juiz_manage_user_custom_page() {
 		}
 	}
 	// if the user has rights and lets the field blank
-	elseif ( $userRights >= 8 && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label']) && trim($_POST['new_field_label'])=='') {
+	elseif ( $can_create_users && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label']) && trim($_POST['new_field_label'])=='') {
 		$juiz_message = __('You need to fill the field', 'juiz_cuf').' <strong><a href="#new_field_label">'.__('Label of field', 'juiz_cuf').'</a></strong>';
 		$juiz_error++;
 	}
 	// if the user hasn't rights
-	elseif ($userRights < 8 && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label'])) {
+	elseif (!$can_create_users && $_GET['page']==JUIZ_USER_CUSTOM_SLUG && isset($_POST['new_field_label'])) {
 		$juiz_message = __("Sorry, you can't do that !", 'juiz_cuf');
 		$juiz_error++;
 	}
@@ -131,7 +133,7 @@ function juiz_manage_user_custom_page() {
 		==============================
 	*/
 	
-	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='delete' && isset($_GET['custom']) && $_GET['custom']!='') {
+	if ($can_create_users && isset( $_GET['do'] ) && $_GET['do']=='delete' && isset($_GET['custom']) && $_GET['custom']!='') {
 		
 		if ( $juiz_metadata = get_option( 'juiz_user_custom_fields' ) ) {
 
@@ -167,7 +169,7 @@ function juiz_manage_user_custom_page() {
 			}
 		}
 	}
-	elseif ($userRights < 8 && isset( $_GET['do'] ) &&  $_GET['do']=='delete') {
+	elseif (!$can_create_users && isset( $_GET['do'] ) &&  $_GET['do']=='delete') {
 		$juiz_message = __("Sorry, you can't do that !", 'juiz_cuf');
 		$juiz_error++;
 	}
@@ -178,7 +180,7 @@ function juiz_manage_user_custom_page() {
 		==============================
 	*/
 	
-	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='edit' && isset($_GET['custom']) && $_GET['custom']!='') {
+	if ($can_create_users && isset( $_GET['do'] ) && $_GET['do']=='edit' && isset($_GET['custom']) && $_GET['custom']!='') {
 		
 		if ( $juiz_metadata = get_option('juiz_user_custom_fields' ) ) {
 			
@@ -212,7 +214,7 @@ function juiz_manage_user_custom_page() {
 		==============================
 	*/
 	
-	if ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='editing' && isset($_POST['up_field_label']) && $_POST['up_field_label']!='') {
+	if ($can_create_users && isset( $_GET['do'] ) && $_GET['do']=='editing' && isset($_POST['up_field_label']) && $_POST['up_field_label']!='') {
 		
 		if ( $juiz_metadata = get_option( 'juiz_user_custom_fields' ) ) {
 
@@ -262,11 +264,11 @@ function juiz_manage_user_custom_page() {
 			}
 		}
 	}
-	elseif ($userRights >= 8 && isset( $_GET['do'] ) && $_GET['do']=='editing' && isset($_POST['up_field_label']) && $_POST['up_field_label']=='') {
+	elseif ($can_create_users && isset( $_GET['do'] ) && $_GET['do']=='editing' && isset($_POST['up_field_label']) && $_POST['up_field_label']=='') {
 		$juiz_message = __('You need to fill the field', 'juiz_cuf').' <strong><a href="#up_field_label">'.__('Label of field', 'juiz_cuf').'</a></strong>';
 		$juiz_error++;
 	}
-	elseif ($userRights < 8 && isset( $_GET['do'] ) && $_GET['do']=='editing') {
+	elseif (!$can_create_users && isset( $_GET['do'] ) && $_GET['do']=='editing') {
 		$juiz_message = __("Sorry, you can't do that !", 'juiz_cuf');
 		$juiz_error++;
 	}
