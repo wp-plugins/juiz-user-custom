@@ -1,0 +1,71 @@
+/*
+Plugin Name: Juiz User Custom
+Plugin URI: http://wp.creativejuiz.fr
+Author: Geoffrey Crofte
+*/
+
+#juiz-custom-user .form-table {
+	table-layout: fixed;
+	max-width: 600px;
+}
+
+#juiz_custom_user_form {
+	margin-top: 50px;
+}
+
+#juiz_custom_user_form .form-table + h3 {
+	margin-top: 3em;
+	padding-top: 2em;
+	border-top: 1px solid #ddd;
+}
+#juiz_message h3 {
+	margin-bottom: 0.3em;
+}
+
+#juiz_custom_user_form thead th {
+	font-weight: bold;
+}
+#juiz_custom_user_form thead em {
+	display:block;
+	font-weight: normal;
+	font-style: italic;
+}
+#juiz-custom-user .widefat {
+	table-layout:auto;
+	max-width:95%;
+	border-collapse: separate;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#juiz-custom-user tr.alt_0 {
+	background-color: #FCFCFC;
+}
+#juiz-custom-user tr:target td {
+	background: #FFFFE0;
+	border-color: #E6DB55;
+}
+#juiz-custom-user .juiz_edit,
+#juiz-custom-user .juiz_delete {
+	float: left;
+	width: 24px; height: 24px;
+	margin-right: 5px;
+	text-indent: -9999px;
+	background: url(../img/edit.png) center center no-repeat;
+}
+#juiz-custom-user .juiz_delete {
+	background-image: url(../img/delete.png);
+}
+#juiz-custom-user .juiz_support {
+	padding: 20px 20px 20px 60px;
+	margin: 65px 0 30px 0;
+	background: #d5e6ec url(../img/support.png) 1% 50% no-repeat;
+	border: 1px solid #bbd6df;
+	color: #27505d;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+#juiz-custom-user .pp { float: right; margin-left: 100px; }
+#juiz-custom-user .pp_form { display:inline; }
+#juiz-custom-user .pp_form input { vertical-align: middle; }
